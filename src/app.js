@@ -1,5 +1,5 @@
 const express = require("express");
-var cors = require("cors");
+
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
@@ -17,7 +17,8 @@ hbs.registerPartials(partials_path);
 
 app.use(express.static(static_path));
 //link connect to index.html
-app.use(cors());
+
+
 //Routing
 app.get("", (req, res) => {
   res.render("index");
